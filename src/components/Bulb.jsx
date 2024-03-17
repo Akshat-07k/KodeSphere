@@ -1,32 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import '../style/App.css';
 import { motion } from "framer-motion";
 import bulbOff from '../assets/bulb-removebg-preview.png';
 import bulbOn from '../assets/bulb_lit-removebg-preview.png';
 
 function Bulb() {
-    const [val, setVal] = useState(true);
+    const [val, setVal] = useState(false);
     
-    async function fun1(e) {
-        setVal(!val)
-        e.preventDefault();
+    useEffect(() => {
+        async function fetchData() {
+            const body = {
+                "teamid": "H4HryFV",
+                "device": "bulb",
+                "value": val
+            }
 
-        const body = {
-            "teamid": "H4HryFV",
-            "device": "bulb",
-            "value": val
+            const res = await fetch(`https://kodessphere-api.vercel.app/devices`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            });
+
+            // const data = await res.json();
         }
 
-        const res = await fetch(`https://kodessphere-api.vercel.app/devices`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        });
-
-        const data = await res.json();
+        fetchData();
+    }, [val]);
+    function fun1(e) {
+        e.preventDefault();
+        setVal(!val);
     }
+    // async function fun1(e) {
+    //     setVal(!val)
+    //     e.preventDefault();
+
+    //     const body = {
+    //         "teamid": "H4HryFV",
+    //         "device": "bulb",
+    //         "value": val
+    //     }
+
+    //     const res = await fetch(`https://kodessphere-api.vercel.app/devices`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(body)
+    //     });
+
+    //     const data = await res.json();
+    // }
 
     return (
         <motion.div className='component'

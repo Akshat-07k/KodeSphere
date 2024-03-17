@@ -49,8 +49,9 @@ function AirConditioner() {
                 </div>
                 <label for="inputPassword5" class="form-label">Temprature: <span>{val2}</span></label>
                 <input defaultValue={16} type="range" class="form-range" min="16" max="30" id="customRange2" onChange={(e) => { setVal2(e.target.value) }} />
+
                 <div className='submit-btn'>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Temperature </button>
                 </div>
             </form>
         </motion.div >
