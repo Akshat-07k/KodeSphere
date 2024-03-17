@@ -9,10 +9,10 @@ function Bulb() {
             <p>Turn on or off the bulb</p>
             <form>
                 <div class="form-check form-switch">
-                    <label class="form-check-label" for="flexSwitchCheckChecked">State</label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                    <label class="form-check-la / Ofbel" for="flexSwitfchCheckDefault">O</label>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
     )

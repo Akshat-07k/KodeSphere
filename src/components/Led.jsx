@@ -10,8 +10,8 @@ function Led() {
 
             <form>
                 <label for="exampleColorInput" class="form-label">Color</label>
-                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" />
-                <button type="submit">Submit</button>
+                <input type="color" class="form-control form-control-color" id="exampleColorInput" defaultValue="#fff" title="Choose your color" />
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div >
     )

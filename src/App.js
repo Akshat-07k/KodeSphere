@@ -1,6 +1,7 @@
 import Fan from "./components/Fan";
 import Bulb from "./components/Bulb";
 import Led from "./components/Led";
+import Status from "./components/Status";
 import AirConditioner from "./components/AirConditioner";
 import './style/App.css';
 
@@ -13,6 +14,9 @@ function App() {
         <Bulb />
         <Led />
         <AirConditioner />
+      </div>
+      <div>
+        <Status />
       </div>
     </div>
   );
