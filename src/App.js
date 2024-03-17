@@ -7,18 +7,18 @@ import './style/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='header'>kokaine</h1>
+    <div className="App" >
+      <h1 h1 className='header' > TEAM KOKAINE</h1>
       <div className="container">
         <Fan />
         <Bulb />
         <Led />
         <AirConditioner />
       </div>
-      <div>
-        <Status />
+      <div className="container">
+          <Status />
       </div>
-    </div>
+    </div >
   );
 }
 
